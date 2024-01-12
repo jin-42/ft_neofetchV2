@@ -15,7 +15,7 @@ frequence=$(lscpu | grep -e "CPU max MHz:" | awk '{if (!printed) {printf "%0.f",
 term=$(echo $TERM) 
 log=$(w | awk "NR==3" | awk '{print $4}')
 echo 
-echo -e "  ⠄⠄⠄⢰⣧⣼⣯⠄⣸⣠⣶⣶⣦⣾⠄⠄⠄⠄⡀⠄⢀⣿⣿⠄⠄⠄⢸⡇⠄⠄  \e[38;5;175m$USER@hostname\033[39m"
+echo -e "  ⠄⠄⠄⢰⣧⣼⣯⠄⣸⣠⣶⣶⣦⣾⠄⠄⠄⠄⡀⠄⢀⣿⣿⠄⠄⠄⢸⡇⠄⠄  \e[38;5;175m$USER@$hostname\033[39m"
 echo -e "  ⠄⠄⠄⣾⣿⠿⠿⠶⠿⢿⣿⣿⣿⣿⣦⣤⣄⢀⡅⢠⣾⣛⡉⠄⠄⠄⠸⢀⣿⠄  \033[91mVendor: \033[39m$vendor"
 echo -e "  ⠄⠄⢀⡋⣡⣴⣶⣶⡀⠄⠄⠙⢿⣿⣿⣿⣿⣿⣴⣿⣿⣿⢃⣤⣄⣀⣥⣿⣿⠄  \033[91mCpu : \033[39m($cpu_core)core @$frequence MHz"
 echo -e "  ⠄⠄⢸⣇⠻⣿⣿⣿⣧⣀⢀⣠⡌⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⣿⣿⣿⠄  \033[91mOS: \033[39m$os"
